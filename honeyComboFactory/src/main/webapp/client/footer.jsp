@@ -51,9 +51,9 @@ footer {
 								<h4>Team</h4>
 								<ul>
 									<li><a href="https://joyfully-ever.tistory.com">김동현(팀장)</a></li>
-									<li><a href="#">장지현</a></li>
+									<li><a href="https://www.notion.so/JAVA-1d8b46ed481e81ec8b89d5998b6226e6?pvs=12">장지현</a></li>
 									<li><a href="https://blog.naver.com/npiddling">정규민</a></li>
-									<li><a href="#">고강희</a></li>
+									<li><a href="https://dev-k-h.tistory.com/">고강희</a></li>
 								</ul>
 							</div>
 						</div>
@@ -63,7 +63,7 @@ footer {
 							<div class="footer-tittle">
 								<h4>Teacher</h4>
 								<ul>
-									<li><a href="#">김효경</a></li>
+									<li><a href="https://blog.naver.com/coding_helper">김효경</a></li>
 								</ul>
 							</div>
 						</div>
