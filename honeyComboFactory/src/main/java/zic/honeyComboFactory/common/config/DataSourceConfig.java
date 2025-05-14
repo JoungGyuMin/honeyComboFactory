@@ -22,8 +22,8 @@ public class DataSourceConfig {
         config.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
 
         // DB 접속 계정
-        config.setUsername("honeyComboFactory");
-        config.setPassword("0000");
+        config.setUsername("계정 이름");
+        config.setPassword("계정 비밀번호");
 
         // 커넥션 풀 성능 관련 설정
         config.setConnectionTestQuery("SELECT 1 FROM DUAL"); // 커넥션 유효성 검사 쿼리
