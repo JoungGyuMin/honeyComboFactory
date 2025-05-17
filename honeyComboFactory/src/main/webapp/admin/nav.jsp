@@ -34,14 +34,13 @@
 				</button>
 
 				<a class="navbar-brand waves-effect waves-dark"
-					href="/admin/member"> <i class="large material-icons"></i>
+					href="manageMember.do"> <i class="large material-icons"></i>
 					<strong>HoneyComboFactory</strong>
 				</a>
-
 			</div>
 			<!-- 사이드바 드롭다운 -->
 			<ul class="nav navbar-top-links navbar-right">
-				<li><a class="dropdown-button waves-effect waves-dark" href="#"
+				<li><a class="dropdown-button waves-effect waves-dark" href="javascript:void(0);"
 					data-activates="dropdown1"><b>${loginedMemberName}
 							<!--  로그인한 관리자 이름 출력 -->
 					</b>관리자</a></li>
@@ -72,7 +71,6 @@
 			</div>
 		</nav>
 		
-	<!-- JS Scripts-->
 	<!-- jQuery Js -->
 	<script
 		src="assets/admin/js/jquery-1.10.2.js"></script>
@@ -84,17 +82,13 @@
 		src="assets/admin/js/jquery.metisMenu.js"></script>
 	<!-- Custom Js -->
     <script src="assets/admin/js/custom-scripts.js"></script>
-	
 	<!-- 스위트 알럿 js -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-	
 	<!-- 스위트 알럿 출력 js -->
 	<script src="assets/js/customization/sweetalert.js"></script>
-	
 	<!-- 서버에서 로그인 정보 확인 js -->
 	<script src="assets/admin/js/customization/loginStatus.js"></script>
-	
 	<!-- 관리자 헤더 js -->
 	<script type="text/javascript"
 		src="assets/admin/js/customization/nav.js"></script>

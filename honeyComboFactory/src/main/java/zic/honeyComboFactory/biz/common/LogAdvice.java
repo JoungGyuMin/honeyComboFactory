@@ -46,20 +46,17 @@ public class LogAdvice {
 		// 걸린 시간을 체크해주는 스프링에서 지원하는 객체
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start(); // 시간 체크 시작
-		
+
 		Object result = null;
 		try {
 			result = pjp.proceed(); // 핵심 관심 수행
 		} catch (Throwable e) { // 예외 처리
 			e.printStackTrace();
+		} finally { // 예외가 발생하든 안 하든 무조건 수행
+			stopWatch.stop(); // 시간 체크 종료
+			System.out.println("핵심 로직 수행에 걸린 시간 : [" + stopWatch.getTotalTimeMillis() + "ms]");
 		}
 		
-		stopWatch.stop(); // 시간 체크 종료
-
-		// 걸린시간 ms로 저장
-		Long time = stopWatch.getTotalTimeMillis();
-		System.out.println("핵심 로직 수행에 걸린 시간 : [" + time + "]");
 		return result;
 	}
-
 }
