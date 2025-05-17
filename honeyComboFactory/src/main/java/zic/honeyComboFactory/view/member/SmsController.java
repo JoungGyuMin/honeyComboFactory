@@ -40,10 +40,13 @@ public class SmsController {
 		   // 입력된 인증번호와 세션 값 비교 (일치 여부 확인)
 		boolean isValid = inputCode != null && inputCode.equals(savedCode);
 		System.out.println("[컨트롤러] 인증번호 검증: 입력값=" + inputCode + ", 세션값=" + savedCode + ", 일치=" + isValid);
-		  // 인증 성공 시, 인증 완료 플래그 저장
-	    if (isValid) {
-	        session.setAttribute("isSmsVerified", true);
+		if (isValid) {
+	        session.removeAttribute("authCode"); // 인증번호는 1회성이라 제거
 	    }
+		  // 인증 성공 시, 인증 완료 플래그 저장
+	    //if (isValid) {
+	      //  session.setAttribute("isSmsVerified", true);
+	    //}
 		
 		// JSON 형식으로 인증 결과 응답
 		return ResponseEntity.ok(Map.of("valid", isValid));
