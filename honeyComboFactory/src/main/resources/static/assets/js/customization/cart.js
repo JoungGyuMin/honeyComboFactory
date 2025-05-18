@@ -13,7 +13,7 @@ const purchaseCartProduct = () => {
 	let cartProductNumberDatas = "";
 
 	// 체크된 상품들의 번호 저장
-	$('.productCheckBox:checked').each(function() {
+	$('.productCheckBox:checked:not(:disabled)').each(function() {
 		const productNumber = $(this).val(); // 상품 번호
 
 		// 상품 번호를 저장 (처음이 아니면 + 추가)
@@ -101,8 +101,8 @@ const clickOneCheckBox = (isChecked) => {
 // 전체 체크박스 체크 상태 여부 검사 기능
 const checkAllChecked = () => {
 	console.log("전체 체크박스 체크 상태 여부 검사 실행");
-	const totalCheckboxes = $('.productCheckBox').length; // 전체 체크박스 개수
-	const checkedCheckboxes = $('.productCheckBox:checked').length; // 체크된 체크박스 개수
+	const totalCheckboxes = $('.productCheckBox:not(:disabled)').length; // 전체 체크박스 개수
+	const checkedCheckboxes = $('.productCheckBox:checked:not(:disabled)').length; // 체크된 체크박스 개수
 	console.log("전체 체크박스 개수 : [" + totalCheckboxes + "]");
 	console.log("체크된 체크박스 개수 : [" + checkedCheckboxes + "]");
 
@@ -119,7 +119,7 @@ const calculationTotalAmount = () => {
 	let totalAmount = 0;
 
 	// 체크된 상품들의 가격을 합산
-	$('.productCheckBox:checked').each(function() {
+	$('.productCheckBox:checked:not(:disabled)').each(function() {
 		const productNumber = $(this).val();  // 개별 상품 번호
 
 		// 할인된 가격이 있으면 그걸 사용, 없으면 일반 가격 사용
@@ -140,8 +140,9 @@ const calculationTotalAmount = () => {
 const selectAllProduct = (isChecked) => {
 	console.log("장바구니 상품 전체 체크 여부 : [" + isChecked + "]");
 
-	// productCheckBox 클래스의 모든 체크박스를 선택하여 상태 변경
-	$(".productCheckBox").prop('checked', isChecked);
+	// productCheckBox 클래스의 모든 체크박스를 선택하여
+	// disabled가 아닌 체크박스만 상태 변경
+	$(".productCheckBox:not(:disabled)").prop('checked', isChecked);
 
 	// 장바구니 상품 가격 총합 계산 함수 호출
 	calculationTotalAmount();
@@ -231,7 +232,7 @@ const deleteCartProduct = () => {
 	let cartProductNumberDatas = ""; // 선택된 상품 번호들을 저장할 문자열
 
 	// 체크된 상품들의 번호 저장
-	$('.productCheckBox:checked').each(function() {
+	$('.productCheckBox:checked:not(:disabled)').each(function() {
 		const productNumber = $(this).val(); // 상품 번호
 
 		// 상품 번호를 저장 (처음이 아니면 + 추가)
