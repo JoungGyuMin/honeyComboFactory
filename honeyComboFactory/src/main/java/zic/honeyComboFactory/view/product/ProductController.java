@@ -247,6 +247,7 @@ public class ProductController {
 			productComboMap.put("productComboDiscount", product.getProductComboDiscount()); // 할인율
 			productComboMap.put("productComboDiscountedPrice", product.getProductComboDiscountedPrice()); // 할인율 적용 가격
 			productComboMap.put("totalCountNumber", product.getTotalCountNumber()); // 총 개수
+			productComboMap.put("productComboStock", product.getProductComboStock()); // 재고 수
 			response.add(productComboMap); // 결과 리스트에 추가
 		}
 	}
@@ -273,6 +274,7 @@ public class ProductController {
 			productMap.put("productSingleDiscount", product.getProductSingleDiscount()); // 할인율
 			productMap.put("productSingleDiscountedPrice", product.getProductSingleDiscountedPrice()); // 할인율 적용 가격
 			productMap.put("totalCountNumber", product.getTotalCountNumber()); // 총 개수
+			productMap.put("productSingleStock", product.getProductSingleStock()); // 재고 수
 			response.add(productMap); // 결과 리스트에 추가
 		}
 	}
