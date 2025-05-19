@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import jakarta.servlet.http.HttpSession;
-import zic.honeyComboFactory.external.sms.SmsAPIService;
+import zic.honeyComboFactory.common.external.sms.SmsAPIService;
 
 @Controller
 public class SmsController {

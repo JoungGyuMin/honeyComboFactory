@@ -23,7 +23,7 @@ public class PurchaseProcessService {
 	private ShoppingCartService shoppingCartService;
 
 	@Transactional
-	// 상품 결제 후 DB처리 기능
+	// 상품 결제 전 DB처리 기능
 	public int processPurchase(HttpSession session, List<Map<String, Object>> orderList, long totalAmount,
 			PurchaseVO purchaseVO, String tid, String partnerOrderId, String partnerUserId, List<Long> sortedCartProductNumberDatas, String cartProductNumberDatas) {
 		try {

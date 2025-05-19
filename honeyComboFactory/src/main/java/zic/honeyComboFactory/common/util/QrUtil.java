@@ -13,8 +13,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 public class QrUtil { // QR 코드
 	// 전달받은 텍스트를 QR 코드로 생성하고, 이를 Base64로 인코딩하여 반환 기능
-	public static String generateQRCodeBase64(String text, int width, int height, Color foregroundColor,
-			Color backgroundColor) {
+	public static String generateQRCodeBase64(String text, int width, int height, Color foregroundColor, Color backgroundColor) {
 		try {
 			// QR 코드 생성 객체화
 			QRCodeWriter qrCodeWriter = new QRCodeWriter();

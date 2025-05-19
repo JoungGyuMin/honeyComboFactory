@@ -12,7 +12,6 @@ import zic.honeyComboFactory.biz.purchaseVO.PurchaseVO;
 
 @Service
 public class PurchaseTransactionMybatisService { // 주문 서비스
-
 	@Autowired
 	private OraclePurchaseDAOMybatis purchaseDAO;
 	@Autowired

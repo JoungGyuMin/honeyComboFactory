@@ -8,9 +8,9 @@ public interface MemberService { // 회원 인터페이스
 
 	MemberVO getOne(MemberVO vo); // SelectOne()
 
-	boolean insert(MemberVO vo);
+	boolean insert(MemberVO vo); // C
 
-	boolean update(MemberVO vo);
+	boolean update(MemberVO vo); // U
 
-	boolean delete(MemberVO vo);
+	boolean delete(MemberVO vo); // D
 }

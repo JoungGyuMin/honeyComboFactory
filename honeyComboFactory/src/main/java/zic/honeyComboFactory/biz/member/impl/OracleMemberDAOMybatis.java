@@ -10,9 +10,9 @@ import zic.honeyComboFactory.biz.memberVO.MemberVO;
 
 @Repository("oracleMemberDAO")
 public class OracleMemberDAOMybatis { // 회원 기능 - Oracle DB
-
 	@Autowired
 	private SqlSessionTemplate mybatis;
+	
 	// getAll → R
 	public List<MemberVO> getAll(MemberVO memberVO) {
 		System.out.println("전체 회원 조회");

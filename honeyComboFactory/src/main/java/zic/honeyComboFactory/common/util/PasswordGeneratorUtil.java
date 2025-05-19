@@ -10,9 +10,9 @@ public class PasswordGeneratorUtil {
 	private static final String digits = "0123456789";
 	private static final String specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 	private static final String combinedChars = upper + lower + digits + specialChars;
-
 	private static final SecureRandom random = new SecureRandom();
 
+	// 비밀번호 자동생성 기능
 	public static String generateRandomPassword() {
 		StringBuilder password = new StringBuilder();
 
