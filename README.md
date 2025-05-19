@@ -1,12 +1,6 @@
 # honeyComboFactory 프로젝트 🍯
 편의점 식품을 조합하여 세트로 판매하는 꿀조합팩토리
 
-## 프로젝트 클론 📥
-git clone https://github.com/JoungGyuMin/honeycombofactory.git
-
-## DB 설정 🛠️
-src/main/java/zic/honeyComboFactory/common/config/DataSourceConfig/ 파일 수정
-
 ## 기술 스택 ⚙️
 <!-- 기술 스택 배지 -->
 <p align="center">
@@ -30,6 +24,8 @@ src/main/java/zic/honeyComboFactory/common/config/DataSourceConfig/ 파일 수�
   <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle" />
 </p>
 
+## 프로젝트 클론 📥
+git clone https://github.com/JoungGyuMin/honeycombofactory.git
 
 ## 프로젝트 디렉토리 구조 🗂️
 
