@@ -22,7 +22,7 @@ public class TransactionConfig {
     }
     
     @Bean // TransactionTemplate를 스프링 빈으로 등록
-    public TransactionTemplate transactionTemplate(PlatformTransactionManager transactionManager) {
+    public TransactionTemplate transactionTemplate(PlatformTransactionManager transactionManager) { 
         return new TransactionTemplate(transactionManager);
     }
 }

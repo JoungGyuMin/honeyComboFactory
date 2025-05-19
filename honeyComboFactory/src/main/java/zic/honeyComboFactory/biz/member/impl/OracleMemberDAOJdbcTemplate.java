@@ -10,8 +10,8 @@ import org.springframework.jdbc.core.RowMapper;
 
 import zic.honeyComboFactory.biz.memberVO.MemberVO;
 
+//@Repository("oracleMemberDAO")
 public class OracleMemberDAOJdbcTemplate { // 회원 기능 - Oracle DB
-
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
@@ -298,7 +298,6 @@ class MemberGetAllRowMapper implements RowMapper<MemberVO> {
 		System.out.println("getAll 데이터 [" + data + "]");
 		return data;
 	}
-
 }
 
 // 내정보 본인확인, 이메일 중복검사에 필요한 데이터 반환

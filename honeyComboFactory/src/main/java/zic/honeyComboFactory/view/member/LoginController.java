@@ -65,17 +65,17 @@ public class LoginController { // 로그인 처리
 			return result;
 		}
 
-//		System.out.println("----------------------------------------");
-//		System.out.println("암호화 비밀번호 비교");
-//		System.out.println("입력받은 비밀번호 : "+rawPassword+"]");
-//		System.out.println("암호화된 비밀번호 : "+memberVO.getMemberPassword()+"]");
-//		System.out.println("----------------------------------------");
-//		// 암호화된 비밀번호 비교
-//		if (!passwordEncoderUtil.matchesPassword(rawPassword, memberVO.getMemberPassword())) {
-//			// 비밀번호가 일치하지 않으면
-//			System.out.println("비밀번호 불일치");
-//			return result;
-//		}
+		System.out.println("----------------------------------------");
+		System.out.println("암호화 비밀번호 비교");
+		System.out.println("입력받은 비밀번호 : "+rawPassword+"]");
+		System.out.println("암호화된 비밀번호 : "+memberVO.getMemberPassword()+"]");
+		System.out.println("----------------------------------------");
+		// 암호화된 비밀번호 비교
+		if (!passwordEncoderUtil.matchesPassword(rawPassword, memberVO.getMemberPassword())) {
+			// 비밀번호가 일치하지 않으면
+			System.out.println("비밀번호 불일치");
+			return result;
+		}
 
 		System.out.println("로그인 성공");
 		session.setAttribute("memberIsAdmin", memberVO.isMemberIsAdmin());

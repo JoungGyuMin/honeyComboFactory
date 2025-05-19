@@ -71,6 +71,7 @@ public class KakaoPayApprovalController { // 카카오페이 승인 처리
 
 		long totalAmount = Long.parseLong(orderInfo.get("totalAmount").toString());
 
+		// 결체 처리 서비스 실행
 		int status = this.purchaseProcessService.processPurchase(session, orderList, totalAmount, purchaseVO, tid,
 				partner_order_id, partner_user_id, sortedCartProductNumberDatas, cartProductNumberDatas);
 
