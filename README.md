@@ -66,7 +66,7 @@ git clone https://github.com/JoungGyuMin/honeycombofactory.git
 - **TransactionConfig**: 트랜잭션 관련 설정 🔄
 - **ViewResolverConfig**: VR(View Resolver) 관련 설정 🖥️
 
-  ### 트랜잭션 (transaction) 🔁
+### 트랜잭션 (transaction) 🔁
 - **ReadOnlyTransactionAspect**: Read류 트랜잭션 결합(Aspect) 처리 관련 클래스 📖
 
 ### 서비스 (service) 🧠
