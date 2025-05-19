@@ -284,7 +284,6 @@ public class ProductService { // 상품 서비스
 			// DB락 성공 여부 반환
 			return productSingleVO != null;
 		}
-
 		return true;
 	}
 }

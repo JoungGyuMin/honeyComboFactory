@@ -35,8 +35,8 @@ public class KakaoLoginController { // 카카오 로그인 컨트롤러
 			// 카카오에게 받은 이메일 주소에서 @ 뒤부분만 추출
 			String emailDomain = kakaoAccount.get("email").toString().split("@")[1];
 			// 카카오에게 받은 핸드폰번호에서 +82는 0으로 변경, "-"는 없애기
-			String phoneNumber = kakaoAccount.get("phone_number").toString().replace("+82 ", "0").replaceAll("-", "")
-					.trim();
+			String phoneNumber = kakaoAccount.get("phone_number").toString().replace("+82 ", "0")
+					.replaceAll("-", "").trim();
 			// 생년월일 하나로 만들기 작업
 			// 생년
 			String birthyear = kakaoAccount.get("birthyear").toString();

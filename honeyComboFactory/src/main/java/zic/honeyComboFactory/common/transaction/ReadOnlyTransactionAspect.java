@@ -8,10 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.support.TransactionTemplate;
 
-@Component
+@Component // 스프링 컨테이너가 직접 new 해서 인스턴스를 생성하고 관리
 @Aspect // AOP 클래스임을 명시
 public class ReadOnlyTransactionAspect {
-
     private final TransactionTemplate transactionTemplate;
 
     @Autowired
@@ -24,8 +23,7 @@ public class ReadOnlyTransactionAspect {
     // "get", "select"로 시작하는 서비스 메서드만 잡기
     @Pointcut("execution(* zic.honeyComboFactory.biz..*Impl.get*(..)) || "
             + "execution(* zic.honeyComboFactory.biz..*Impl.select*(..))")
-    public void readOnlyMethod() {
-    }
+    public void readOnlyMethod() {}
 
     // 읽기 전용 트랜잭션으로 실행
     @Around("readOnlyMethod()")
