@@ -75,7 +75,7 @@ honeyComboFactory/
 ├── resources/
 │   ├── mappings/                     # MyBatis SQL 매핑 XML
 │   ├── static/assets/                # 정적 리소스 (js, css, img)
-│   ├── templates/                    # 템플릿 (Thymeleaf 등)
+│   ├── templates/                    
 │   ├── application.properties
 │   ├── application.yml
 │   └── sql-map-config.xml
