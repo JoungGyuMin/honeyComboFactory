@@ -30,8 +30,7 @@ git clone https://github.com/JoungGyuMin/honeycombofactory.git
 ## 프로젝트 디렉토리 구조 🗂️
 ```
 honeyComboFactory/
-├── build.gradle                     # Gradle 빌드 설정
-├── settings.gradle
+├── pom.xml                          # Maven 빌드 설정
 ├── README.md
 ├── .gitignore
 
