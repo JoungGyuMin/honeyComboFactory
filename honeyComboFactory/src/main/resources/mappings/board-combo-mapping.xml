@@ -157,6 +157,10 @@
 		BOARD_COMBO_CONTENT = #{boardComboContent} WHERE BOARD_COMBO_NUMBER =
 		#{boardComboNumber}
 	</update>
+	<update id="UPDATEVIEWCOUNT">
+		UPDATE BOARD_COMBO SET BOARD_COMBO_VIEW_COUNT = NVL(BOARD_COMBO_VIEW_COUNT, 0) + 1
+	    WHERE BOARD_COMBO_NUMBER = #{boardComboNumber}
+	</update>
 
 	<!-- delete -->
 	<!-- 게시글 삭제 -->
