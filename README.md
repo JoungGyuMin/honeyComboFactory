@@ -1,4 +1,4 @@
-# honeyComboFactory 프로젝트 🍯
+# honeyComboFactory 최종 프로젝트 🍯
 편의점 식품을 조합하여 세트로 판매하는 꿀조합팩토리
 
 ## 기술 스택 ⚙️
