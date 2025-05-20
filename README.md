@@ -104,7 +104,7 @@ honeyComboFactory/
 ### 인증 (auth) 💼
 - **SessionController**: 세션에 저장된 로그인한 회원정보 반환 관련 클래스 🔐
 
-### 크롤링 (auth) 🕷️
+### 크롤링 (crawling) 🕷️
 - **CrawlingListener**: 서버 실행 시 크롤링 관련 클래스 ⚙️
 - **CuCrawlingMybatisService**: Cu상품 Mybatis용 크롤링 기능 관련 클래스 🛠️
 - **CuCrawlingService**: Cu상품 JDBC용 크롤링 기능 관련 클래스 🛠️
