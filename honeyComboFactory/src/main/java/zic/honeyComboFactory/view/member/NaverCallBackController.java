@@ -19,8 +19,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpSession;
 import zic.honeyComboFactory.biz.member.impl.MemberServiceImpl;
 import zic.honeyComboFactory.biz.memberVO.MemberVO;
+import zic.honeyComboFactory.common.util.HttpClientUtil;
 import zic.honeyComboFactory.common.util.PasswordGeneratorUtil;
-import zic.honeyComboFactory.common.util.http.HttpClientUtil;
 
 @Controller
 public class NaverCallBackController {
