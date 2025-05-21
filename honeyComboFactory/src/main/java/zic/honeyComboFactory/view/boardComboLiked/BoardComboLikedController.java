@@ -13,12 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import jakarta.servlet.http.HttpSession;
 import zic.honeyComboFactory.biz.boardComboLikedVO.BoardComboLikedService;
 import zic.honeyComboFactory.biz.boardComboLikedVO.BoardComboLikedVO;
-import zic.honeyComboFactory.biz.boardComboVO.BoardComboService;
 
 @Controller
 public class BoardComboLikedController {
-	@Autowired
-	private BoardComboService boardComboService;
 	@Autowired
 	private BoardComboLikedService boardComboLikedService;
 

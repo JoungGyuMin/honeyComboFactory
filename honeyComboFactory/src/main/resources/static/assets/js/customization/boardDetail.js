@@ -113,7 +113,6 @@ $(document).on("click", "#updateBtn", function(e) {
 // 좋아요 여부 받아오기 기능
 const checkLiked = () => {
 	console.log("좋아요 여부 받아올 게시글 번호 : [" + boardComboNumber + "]");
-
 	if (!loginedMemberNumber) { // 비회원이라면
 		return;
 	}
@@ -184,7 +183,6 @@ const clickLiked = () => {
 
 	// 회원 좋아요 여부 값 반전
 	isLiked = !isLiked;
-
 	// 글 좋아요 수 값 변경
 	// 좋아요 등록상태라면
 	if (isLiked) {

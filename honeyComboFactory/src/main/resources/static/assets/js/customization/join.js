@@ -136,7 +136,6 @@ const memberPhoneNumberConfirm = () => {
 
 		console.log("인증번호보내기");
 
-
 		if (!checkMemberPhoneNumber()) { // 거짓이라면
 			console.log("핸드폰 번호 유효성 비통과");
 			// 스위트 알럿창 출력
@@ -287,7 +286,7 @@ const kakaoPostAPIcode = () => {
 			console.log(data);
 
 			let addr = ''; // 주소 변수(도로명, 지번)
-			let extraAddr = ''; // 참고항목 변수(건물병, 법정동 등 )
+			let extraAddr = ''; // 참고항목 변수(건물병, 법정동 등)
 
 			//사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져오기
 			// 사용자가 도로명 주소를 선택했을 경우
