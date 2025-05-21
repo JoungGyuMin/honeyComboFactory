@@ -3,16 +3,14 @@
  */
 const isLoginUrl = "/api/session/member"; // 로그인 상태 확인 url
 
-// 로그인된 사용자 번호
-let loginedMemberNumber = null;
-// 로그인 상태 확인 여부
-let loginStatusChecked = false;
+let loginedMemberNumber = null; // 로그인된 사용자 번호
+let loginStatusChecked = false; // 로그인 상태 확인 여부
 
 // 서버에서 받은 로그인 정보 저장 기능
 const initLoginStatus = async () => {
 	try {
 		const response = await fetch(isLoginUrl, {
-			method: "GET",
+			method: "GET", // GET방식
 			headers: {
 				"Content-Type": "application/json"
 			}
@@ -24,7 +22,7 @@ const initLoginStatus = async () => {
 
 		// 응답 저장
 		const res = await response.json();
-
+		
 		// 로그인 중이라면
 		if (res.authenticated) {
 			loginedMemberNumber = res.loginedMemberNumber;
