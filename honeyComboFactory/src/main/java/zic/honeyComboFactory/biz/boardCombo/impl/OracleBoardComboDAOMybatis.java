@@ -46,9 +46,25 @@ public class OracleBoardComboDAOMybatis { // 꿀조합 게시판 기능 - Oracle
 
 	// update → U
 	public boolean update(BoardComboVO boardComboVO) {
-		System.out.println("게시글 수정");
-		int result = mybatis.update("BoardComboDAO.UPDATECOMBOBOARD", boardComboVO);
-		if (result <= 0) {
+		int result = 0;
+		// 게시글 수정
+		if (boardComboVO.getCondition().equals("UPDATECOMBOBOARD")) {
+			System.out.println("게시글 수정");
+			result = mybatis.update("BoardComboDAO.UPDATECOMBOBOARD", boardComboVO);
+			if (result <= 0) {
+				return false;
+			}
+		} 
+		// 조회수 업데이트
+		else if (boardComboVO.getCondition().equals("UPDATEVIEWCOUNT")) {
+			System.out.println("조회수 업데이트");
+			result = mybatis.update("BoardComboDAO.UPDATEVIEWCOUNT", boardComboVO);
+			if(result<=0) {
+				return false;
+			}
+		}
+		else {
+			System.out.println("잘못된 condition값 입력" +boardComboVO.getCondition()+"]");
 			return false;
 		}
 		return true;
