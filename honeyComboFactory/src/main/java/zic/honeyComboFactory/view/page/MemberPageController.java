@@ -219,6 +219,14 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 	// 꿀조합 게시글 상세정보 페이지 이동
 	@GetMapping("/boardDetail.do")
 	public String boardDetailPage(BoardComboVO boardComboVO, Model model) {
+		// 조회수 증가
+		boardComboVO.setCondition("UPDATEVIEWCOUNT");
+		boolean flag = this.boardComboService.update(boardComboVO);
+		if (!flag) { // DB에 조회수 증가 실패 시
+			System.out.println(boardComboVO.getBoardComboNumber() + "번 게시글 조회수 증가 실패");
+		}
+
+		// 글 상세정보 DB에게 받아오기
 		boardComboVO = this.boardComboService.getOne(boardComboVO);
 		System.out.println("게시글 상세페이지 보낼 값 : [" + boardComboVO + "]");
 
@@ -523,15 +531,15 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 	public String errorPage() {
 		return "client/error";
 	}
-	
+
 	// 실행 중 에러 발생 시 에러 페이지 이동
 	@ExceptionHandler(RuntimeException.class)
 	public String handleRuntimeException(RuntimeException ex, Model model) {
-	    // 예외 로그 출력
-	    ex.printStackTrace();
+		// 예외 로그 출력
+		ex.printStackTrace();
 
-	    // 에러 페이지로 이동
-	    return "error.do";
+		// 에러 페이지로 이동
+		return "error.do";
 	}
 
 	// 고도화 메서드
@@ -550,7 +558,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		}
 	}
 
-	// 성능 최적화 메서드
+	// 고도화 메서드
 	// 세션에 저장된 회원번호 존재여부 반환 기능
 	private boolean isSessionLoginedMemberNumber(HttpSession session) {
 		return session.getAttribute("loginedMemberNumber") != null;

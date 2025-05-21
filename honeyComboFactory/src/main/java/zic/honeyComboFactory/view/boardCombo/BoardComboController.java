@@ -117,13 +117,13 @@ public class BoardComboController {
 	public ResponseEntity<Boolean> updateBoard(BoardComboVO boardComboVO, @RequestParam("boardComboNumber") long number,
 			@RequestParam("boardComboTitle") String title, @RequestParam("boardComboContent") String content) {
 
-		// 게시글 번호
+		// DB에 게시글 수정을 위한 파서 세팅
+		boardComboVO.setCondition("UPDATECOMBOBOARD");
 		boardComboVO.setBoardComboNumber(number);
-		// 게시글 제목
 		boardComboVO.setBoardComboTitle(title);
-		// 게시글 내용
 		boardComboVO.setBoardComboContent(content);
 
+		// DB에 게시글 수정 성공여부
 		boolean result = boardComboService.update(boardComboVO);
 
 		return ResponseEntity.ok(result);
