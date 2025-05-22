@@ -25,7 +25,7 @@
 </p>
 
 ## 프로젝트 클론 📥
-git clone https://github.com/JoungGyuMin/honeycombofactory.git
+git clone https://github.com/JoungGyuMin/honeyComboFactory.git
 
 ## 프로젝트 디렉토리 구조 🗂️
 ```
