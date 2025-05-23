@@ -46,7 +46,7 @@ public class PurchaseTransactionMybatisService { // 주문 서비스
 		String today = new SimpleDateFormat("yyyyMMdd").format(new Date());
 
 		// DB에서 시퀀스 값 받아오기
-		int seq = this.purchaseDAO.getNextPurchaseSequence();
+		long seq = this.purchaseDAO.getNextPurchaseSequence();
 
 		// 날짜 + 시퀀스를 조합한 주문번호
 		// format("%03d", seq)으로 001처럼 세자리 수 만듬
