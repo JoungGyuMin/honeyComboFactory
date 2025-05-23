@@ -29,8 +29,7 @@
 				<!-- 게시글 Start -->
 				<table id="updateBoardTable">
 					<tr>
-						<th>작성자</th>
-						<td>${loginedMemberName}</td>
+						<!-- 작성자 출력 삭제 -->
 						<th>제목</th>
 						<td colspan="3"><input id="updateBoardTitle" type="text"
 							maxlength="100" required></td>
