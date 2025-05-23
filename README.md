@@ -1,5 +1,5 @@
 # honeyComboFactory 프로젝트 🍯
-편의점 식품을 조합하여 세트로 판매하는 꿀조합팩토리 -최종 프로젝트-
+‘꿀조합팩토리’는 편의점에서 판매되는 식품을 조합해, 사용자 맞춤형 세트를 구성하고 판매하는 웹 기반 서비스입니다. -최종 프로젝트-
 
 ## 기술 스택 ⚙️
 <!-- 기술 스택 배지 -->
@@ -25,7 +25,7 @@
 </p>
 
 ## 프로젝트 클론 📥
-git clone https://github.com/JoungGyuMin/honeycombofactory.git
+git clone https://github.com/JoungGyuMin/honeyComboFactory.git
 
 ## 프로젝트 디렉토리 구조 🗂️
 ```
