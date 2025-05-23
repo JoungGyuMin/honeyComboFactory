@@ -31,7 +31,7 @@
 					<tr>
 						<!-- 작성자 출력 삭제 -->
 						<th>제목</th>
-						<td colspan="3"><input id="updateBoardTitle" type="text"
+						<td colspan="5"><input id="updateBoardTitle" type="text"
 							maxlength="100" required></td>
 					</tr>
 					<tr>
