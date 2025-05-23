@@ -77,7 +77,7 @@ public class OraclePurchaseDAOMybatis { // 주문 기능 - Oracle DB
 	}
 
 	// 시퀀스 값 조회(주문번호 생성용)
-	public int getNextPurchaseSequence() {
+	public long getNextPurchaseSequence() {
 		return mybatis.selectOne("PurchaseDAO.GETNEXTPURCHASENUMBER");
 	}
 }
