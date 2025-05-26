@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	<link rel="stylesheet" href="/assets/admin/css/customization/search.css">
 <meta charset="UTF-8">
 <title>꿀조합 상품 관리 - 꿀조합팩토리</title>
 </head>
@@ -21,10 +22,10 @@
       </ol>
     </div>
 	<!-- 검색 버튼 추가 -->
-	  <form action="manageGSProduct.do" method="get" style="text-align: right; margin-bottom: 10px;">
-	      <input type="text" name="searchKeyword" placeholder="상품명 또는 상품번호 검색" style="padding: 5px;" />
-	      <button type="submit" class="btn btn-sm btn-info">검색</button>
-	  </form>
+		<form action="manageGsProduct.do" method="get" class="search-form">
+		    <input type="text" name="searchKeyword" placeholder="상품명 또는 상품번호 검색" />
+		    <button type="submit">검색</button>
+		</form>
 				<!-- 콤보 상품 테이블 -->
 				<div id="page-inner">
 					<div class="row">
