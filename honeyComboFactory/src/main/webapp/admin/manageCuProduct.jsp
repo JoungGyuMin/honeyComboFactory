@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	<link rel="stylesheet" href="/assets/admin/css/customization/search.css">
 <meta charset="UTF-8">
 <title>CU 상품 관리 - 꿀조합팩토리</title>
 </head>
@@ -21,6 +22,12 @@
                 <li class="active">CU PRODUCT</li>
             </ol>
         </div>
+		
+		<!-- 검색 버튼 추가 -->
+		<form action="manageCuProduct.do" method="get" class="search-form">
+		    <input type="text" name="searchKeyword" placeholder="상품명 또는 상품번호 검색" />
+		    <button type="submit">검색</button>
+		</form>
 
         <!-- CU 상품 테이블 -->
      <div id="page-inner">

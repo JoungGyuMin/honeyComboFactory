@@ -23,6 +23,12 @@
                     <li class="active">COMBO</li>
                 </ol>
             </div>
+			<!--검색버튼추가-->
+			<form action="manageBoardCombo.do" method="get" style="text-align: right; margin-bottom: 10px;">
+			    <input type="text" name="searchKeyword" placeholder="제목 또는 작성자 검색" style="padding: 5px;" />
+			    <button type="submit" class="btn btn-sm btn-info">검색</button>
+			</form>
+
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
