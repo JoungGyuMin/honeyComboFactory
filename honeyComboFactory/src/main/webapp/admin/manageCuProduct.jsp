@@ -21,6 +21,12 @@
                 <li class="active">CU PRODUCT</li>
             </ol>
         </div>
+		
+		<!-- 검색 버튼 추가 -->
+		  <form action="manageGSProduct.do" method="get" style="text-align: right; margin-bottom: 10px;">
+		      <input type="text" name="searchKeyword" placeholder="상품명 또는 상품번호 검색" style="padding: 5px;" />
+		      <button type="submit" class="btn btn-sm btn-info">검색</button>
+		  </form>
 
         <!-- CU 상품 테이블 -->
      <div id="page-inner">
