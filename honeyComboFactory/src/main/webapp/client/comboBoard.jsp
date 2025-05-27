@@ -119,7 +119,7 @@
 					<div class="select-this">
 						<form action="#">
 							<div class="select-itms">
-								<a href="updateBoard.do" class="genric-btn warning radius">등록</a>
+								<button type="button" class="genric-btn warning radius" onclick="updateBoard()">등록</button>
 							</div>
 						</form>
 					</div>

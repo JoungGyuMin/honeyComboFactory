@@ -66,19 +66,19 @@
 	<select id="SELECTONEFINDID" resultMap="memberMap">
 		SELECT MEMBER_ID, MEMBER_NUMBER, MEMBER_IS_WITHDRAW FROM MEMBER
 		WHERE (MEMBER_BIRTH = #{memberBirth} AND MEMBER_PHONE_NUMBER =
-		#{memberPhoneNumber})
-		OR (MEMBER_BIRTH = #{memberBirth} AND MEMBER_EMAIL_ID = #{memberEmailId}
-		AND MEMBER_EMAIL_DOMAIN = #{memberEmailDomain})
+		#{memberPhoneNumber, jdbcType=VARCHAR})
+		OR (MEMBER_BIRTH = #{memberBirth} AND MEMBER_EMAIL_ID = #{memberEmailId, jdbcType=VARCHAR}
+		AND MEMBER_EMAIL_DOMAIN = #{memberEmailDomain, jdbcType=VARCHAR})
 	</select>
 
 	<!-- 비밀번호 찾기-->
 	<select id="SELECTONEFINDPASSWORD" resultMap="memberMap">
 		SELECT MEMBER_NUMBER, MEMBER_PASSWORD, MEMBER_IS_WITHDRAW FROM MEMBER
 		WHERE (MEMBER_BIRTH = #{memberBirth} AND MEMBER_ID = #{memberId} AND
-		MEMBER_PHONE_NUMBER = #{memberPhoneNumber})
+		MEMBER_PHONE_NUMBER = #{memberPhoneNumber, jdbcType=VARCHAR})
 		OR (MEMBER_BIRTH = #{memberBirth} AND MEMBER_ID = #{memberId} AND
-		MEMBER_EMAIL_ID = #{memberEmailId} AND MEMBER_EMAIL_DOMAIN =
-		#{memberEmailDomain})
+		MEMBER_EMAIL_ID = #{memberEmailId, jdbcType=VARCHAR} AND MEMBER_EMAIL_DOMAIN =
+		#{memberEmailDomain, jdbcType=VARCHAR})
 	</select>
 
 	<!-- 이메일 중복검사-->
@@ -145,15 +145,15 @@
 		MEMBER_IS_WITHDRAW
 		) VALUES ( #{memberNumber}, #{memberId}, #{memberPassword},
 		#{memberName}, #{memberBirth}, #{memberPhoneNumber},
-		#{memberAddressMain}, #{memberAddressDetail},
-		#{memberEmailId}, #{memberEmailDomain}, SYSDATE, 0, 0)
+		#{memberAddressMain, jdbcType=VARCHAR}, #{memberAddressDetail, jdbcType=VARCHAR},
+		#{memberEmailId, jdbcType=VARCHAR}, #{memberEmailDomain, jdbcType=VARCHAR}, SYSDATE, 0, 0)
 	</insert>
 
 	<!-- update -->
 	<!-- 비밀번호 변경 -->
 	<update id="UPDATEPASSWORD">
 		UPDATE MEMBER SET MEMBER_PASSWORD = #{memberPassword} WHERE
-		MEMBER_NUMBER = #{memberNumber} OR MEMBER_ID = #{memberId}
+		MEMBER_NUMBER = #{memberNumber, jdbcType=VARCHAR} OR MEMBER_ID = #{memberId, jdbcType=VARCHAR}
 	</update>
 
 	<!-- 내 정보 수정 -->
