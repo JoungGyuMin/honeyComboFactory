@@ -37,7 +37,7 @@ public class AdminPageController { // 관리자 페이지 이동 컨트롤러
 		if (!isAdmin(session)) {
 			System.out.println("관리자 외 회원관리 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		memberVO.setCondition("");
@@ -59,7 +59,7 @@ public class AdminPageController { // 관리자 페이지 이동 컨트롤러
 		if (!isAdmin(session)) {
 			System.out.println("관리자 외 CU 상품관리 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		productSingleVO.setCondition("SELECTALLPOPULAR");
@@ -82,7 +82,7 @@ public class AdminPageController { // 관리자 페이지 이동 컨트롤러
 		if (!isAdmin(session)) {
 			System.out.println("관리자 외 GS25 상품관리 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		productSingleVO.setCondition("SELECTALLPOPULAR");
@@ -105,7 +105,7 @@ public class AdminPageController { // 관리자 페이지 이동 컨트롤러
 		if (!isAdmin(session)) {
 			System.out.println("관리자 외 꿀조합 상품관리 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		productComboVO.setCondition("SELECTALLPOPULAR");
@@ -127,7 +127,7 @@ public class AdminPageController { // 관리자 페이지 이동 컨트롤러
 		if (!isAdmin(session)) {
 			System.out.println("관리자 외 꿀조합 게시판 관리 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		boardComboVO.setCondition("SELECTALLADMINCONTENT");
