@@ -233,6 +233,22 @@ const insertComboBoard = (response) => {
 	makePageNation(response.boardComboDatas[0].totalCountNumber);
 }
 
+// 게시글 등록 페이지로 이동
+const updateBoard = () => {
+	console.log("게시글 등록 페이지 이동");
+	if (!loginedMemberNumber) {
+		console.log("로그인 없이 게시글 등록 페이지 이동 요청");
+		// 스위트 알럿창 출력
+		printSweetAlert("warning", "로그인이 필요한 기능입니다!","","login.do")
+
+		return;
+
+	}
+	// 로그인 되어 있으면 게시글 등록 페이지로 이동
+	window.location.href = "updateBoard.do";
+}
+
+
 // 초기 기능 실행 기능
 const runPostLoginSetup = () => {
 	// 회원 게시글 불러오기 함수 호출
