@@ -115,7 +115,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (!isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 없이 내정보 페이지 접근");
 			// 로그인 페이지 이동
-			return "redirect:/client/login";
+			return "redirect:/login.do";
 		}
 
 		long memberNumber = (long) session.getAttribute("loginedMemberNumber");
@@ -138,7 +138,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (!isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 없이 꿀조합 게시글 등록 페이지 접근");
 			// 로그인 페이지 이동
-			return "redirect:/client/login";
+			return "redirect:/login.do";
 		}
 
 		return "client/updateBoard";
@@ -152,7 +152,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (!isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 없이 주문상세 페이지 접근");
 			// 로그인 페이지 이동
-			return "redirect:/client/login";
+			return "redirect:/login.do";
 		}
 
 		// 주문 정보 출력
@@ -230,7 +230,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		boardComboVO = this.boardComboService.getOne(boardComboVO);
 		System.out.println("게시글 상세페이지 보낼 값 : [" + boardComboVO + "]");
 
-		String path = "redirect:comboBoard.do";
+		String path = "redirect:/comboBoard.do";
 
 		if (boardComboVO != null) {
 			model.addAttribute("boardComboDetailData", boardComboVO);
@@ -246,7 +246,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 상태로 로그인 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		return "client/login";
@@ -259,7 +259,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 상태로 회원가입 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		return "client/join";
@@ -272,7 +272,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 상태로 계정찾기 페이지 접근");
 			// 메인 페이지 이동
-			return "redirect:/client/main";
+			return "redirect:/main.do";
 		}
 
 		return "client/findAccount";
@@ -285,7 +285,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (!isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 없이 장바구니 페이지 접근");
 			// 로그인 페이지 이동
-			return "redirect:/client/login";
+			return "redirect:/login.do";
 		}
 
 		final String soldoutImgLink = "assets/img/product/soldout.png";
@@ -520,7 +520,7 @@ public class MemberPageController { // 회원 페이지 이동 컨트롤러
 		if (!isSessionLoginedMemberNumber(session)) {
 			System.out.println("로그인 없이 결제승인 페이지 접근");
 			// 로그인 페이지 이동
-			return "redirect:/client/login";
+			return "redirect:/login.do";
 		}
 
 		return "client/kakaoPayApproval";
