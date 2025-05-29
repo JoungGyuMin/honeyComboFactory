@@ -28,7 +28,7 @@
 git clone https://github.com/JoungGyuMin/honeyComboFactory.git
 
 ## 프로젝트 포트폴리오 💻
-https://docs.google.com/presentation/d/1d8LBJSP7lMvcuzcZnHNcF18NKbG27W0r/edit?usp=drive_link&ouid=117219167947348656675&rtpof=true&sd=true
+https://drive.google.com/file/d/1amxUwoeN1-yA1ODdmj-VNtD5Pngd-F_e/view?usp=drive_link
 
 ## 프로젝트 디렉토리 구조 🗂️
 ```
